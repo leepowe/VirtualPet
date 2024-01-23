@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class VirtualPetTest {
 
@@ -126,5 +129,12 @@ public class VirtualPetTest {
         underTest = new VirtualPet("", "cat", 3, 4, 12);
         underTest.setName("Harry");
         assertEquals("Harry", underTest.getName());
+    }
+
+    @Test
+    public void shouldBeAbleToRandomlyChooseANameFromListOfNames(){
+        underTest.chooseRandomName();
+        assertTrue(Arrays.asList(VirtualPet.names).contains(underTest.getName()));
+        System.out.println(underTest.getName());
     }
 }
