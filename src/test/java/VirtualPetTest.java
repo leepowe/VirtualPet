@@ -113,4 +113,18 @@ public class VirtualPetTest {
         String actualSpecies = underTest.getSpecies();
         assertEquals("dog", actualSpecies);
     }
+
+    @Test
+    public void userCanNameVirtualPetBob(){
+        underTest = new VirtualPet("", "cat", 3, 4, 12);
+        underTest.setName("Bob");
+        assertEquals("Bob", underTest.getName());
+    }
+
+    @Test
+    public void userCanNameVirtualPetHarry(){
+        underTest = new VirtualPet("", "cat", 3, 4, 12);
+        underTest.setName("Harry");
+        assertEquals("Harry", underTest.getName());
+    }
 }

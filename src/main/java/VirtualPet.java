@@ -48,4 +48,8 @@ public class VirtualPet {
     public String getSpecies() {
         return species;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
